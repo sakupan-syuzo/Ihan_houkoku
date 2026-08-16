@@ -113,10 +113,10 @@ export const ReportDocument: React.FC<ReportDocumentProps> = ({
     <div className={`a4-sheet-preview text-black leading-tight bg-white ${isSelectedOnly ? 'mode-selected-only' : 'mode-full-sheet'}`}>
       {/* 上部コンテンツブロック（ヘッダー + 表） */}
       <div className="report-main-content">
-        {/* 1. タイトル */}
-        <div className="mb-4 text-center">
-          <div className="inline-block border border-black px-6 py-1 bg-white shadow-xs">
-            <h1 className="text-xl sm:text-2xl font-bold tracking-wider text-black">
+        {/* 1. タイトル（常に1行で美しく中央揃え表示） */}
+        <div className="mb-3 text-center">
+          <div className="inline-block border border-black px-4 sm:px-6 py-1 bg-white shadow-xs max-w-full">
+            <h1 className="text-base sm:text-xl md:text-2xl font-bold tracking-normal sm:tracking-wider text-black whitespace-nowrap leading-tight">
               {category.reportTitle}
             </h1>
           </div>
