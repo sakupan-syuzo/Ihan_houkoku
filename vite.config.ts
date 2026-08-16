@@ -6,7 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 // https://vite.dev/config/
 export default defineConfig({
   // ★ ここを '/lhan_houkoku/' に変更します
-  base: '/lhan_houkoku/',
+  base: '/Ihan_houkoku/',
   server: {
     host: true,
     port: 5173
