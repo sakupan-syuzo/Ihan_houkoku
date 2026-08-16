@@ -1,0 +1,1346 @@
+{
+  "version": "2026.3-full",
+  "lastUpdated": "2026-08-16",
+  "categories": [
+    {
+      "id": "sf",
+      "name": "SUPER FORMULA",
+      "fullName": "全日本スーパーフォーミュラ選手権",
+      "rulebookName": "2026 全日本スーパーフォーミュラ選手権 統一規則",
+      "reportTitle": "SUPER FORMULA 技術違反報告書",
+      "reportVer": "ver260403-0",
+      "articles": [
+        {
+          "articleNo": "第21条",
+          "articleTitle": "ピットエリア",
+          "sections": [
+            {
+              "sectionNo": "1",
+              "items": [
+                {
+                  "id": "sf_21_1_crew_count",
+                  "text": "6名より多い作業要員が、同時に作業エリアに出た。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "同時に作業エリアに出た人数",
+                  "inputUnit": "人"
+                },
+                {
+                  "id": "sf_21_1_lollipop",
+                  "text": "車両誘導要員が、車両の誘導以外の作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "sf_21_2_signaling",
+                  "text": "シグナリングプラットフォームへ出た人数が4名を超えた、または走行車両を妨害した / 固定的設備を設置した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "違反状況内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "3",
+              "items": [
+                {
+                  "id": "sf_21_3_clean_up",
+                  "text": "ピット作業終了ごとに、ピット前に置いてあるすべての備品を片付けなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sf_21_4_reverse_gear",
+                  "text": "ピットエリアで後退ギアを使用した、または自チーム以外のクルーが押し戻した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "7",
+              "items": [
+                {
+                  "id": "sf_21_7_fire_hazard",
+                  "text": "ピットレーンの作業エリアにおいて発火を伴う装置あるいは高温を生じる装置を使用した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "使用装置・状況"
+                }
+              ]
+            },
+            {
+              "sectionNo": "8",
+              "items": [
+                {
+                  "id": "sf_21_8_tire_assist",
+                  "text": "タイヤ交換要員が、タイヤを装着する際に援助を受けた。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sf_21_8_tire_flat",
+                  "text": "タイヤ交換要員が、外したタイヤを地面に平置きにしなかった。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sf_21_8_tire_throw",
+                  "text": "タイヤ交換要員が、外したタイヤを他の者へ手渡したり、放り投げる等の危険な行為をした。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "行為内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sf_21_9_arm_height",
+                  "text": "タイヤレンチ用エアホース／給油ホース用アームの高さが地面から2.0m以上確保されていなかった。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10",
+              "items": [
+                {
+                  "id": "sf_21_10_pit_line_paint",
+                  "text": "ピットレーン上に線を塗装して引いた。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "12",
+              "items": [
+                {
+                  "id": "sf_21_12_crew_clothing",
+                  "text": "作業エリアに出た作業要員の服装が不適切だった。",
+                  "inputType": "checkbox_with_suboptions",
+                  "subOptions": [
+                    "バイザー・保護ゴーグル",
+                    "ヘルメット",
+                    "グローブ",
+                    "耐火炎スーツ",
+                    "バラクラバ",
+                    "肌の露出"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第22条",
+          "articleTitle": "書類検査および車両検査",
+          "sections": [
+            {
+              "sectionNo": "11",
+              "items": [
+                {
+                  "id": "sf_22_11_cover_screen",
+                  "text": "ピットレーン／グリッド等で車両を隠すスクリーン・カバー等の遮蔽物を使用した（スペアウイングカバー、工具台車遮蔽等）。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "遮蔽内容・場所"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第23条",
+          "articleTitle": "タイヤ",
+          "sections": [
+            {
+              "sectionNo": "6",
+              "items": [
+                {
+                  "id": "sf_23_6_tire_heating",
+                  "text": "タイヤに対する意図的な加熱を行った、または密閉・高温空間で保管した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sf_23_9_tire_limit",
+                  "text": "規定（最大6セット等）以外のタイヤをピットエリア内に持ち込んだ。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第25条",
+          "articleTitle": "燃料",
+          "sections": [
+            {
+              "sectionNo": "1",
+              "items": [
+                {
+                  "id": "sf_25_1_refuel_place",
+                  "text": "ピットレーンの作業エリアを含むピット内以外で燃料補給を行った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "sf_25_2_refuel_gear",
+                  "text": "燃料補給要員・補助要員・消火要員が規定の装備（バイザーを閉じたフルフェイス、耐火スーツ、グローブ、バラクラバ）を着用していなかった。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "不備装備内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "5",
+              "items": [
+                {
+                  "id": "sf_25_5_liquid_replenish",
+                  "text": "決勝レース中に燃料以外の液体（水・オイル等）を補給した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "補給液体内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "6. 1)-6)",
+              "items": [
+                {
+                  "id": "sf_25_6_refuel_procedure",
+                  "text": "給油手順違反（装置の転倒防止未施工、カウル未装着、消火要員未待機・他作業兼務、燃料漏洩放置等）。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "違反手順詳細"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第26条",
+          "articleTitle": "一般安全規定",
+          "sections": [
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sf_26_4_engine_assist",
+                  "text": "ピットエリアで人為的な支援による発進（手押し発進）を行った、または後退ギアを使用した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "6",
+              "items": [
+                {
+                  "id": "sf_26_6_steering",
+                  "text": "車両を離れる際に、ステアリングホイールを取り付けなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sf_26_9_pit_speed",
+                  "text": "ピットレーン通過速度（最高60km/h）を超過した。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "計測速度",
+                  "inputUnit": "km/h"
+                }
+              ]
+            },
+            {
+              "sectionNo": "19",
+              "items": [
+                {
+                  "id": "sf_26_19_unsafe_drive",
+                  "text": "安全でない状態で走行した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第31条",
+          "articleTitle": "スタート手順",
+          "sections": [
+            {
+              "sectionNo": "4. 2)",
+              "items": [
+                {
+                  "id": "sf_31_4_2_three_min",
+                  "text": "3分前ボードが提示された以降に、作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4. 3)",
+              "items": [
+                {
+                  "id": "sf_31_4_3_crew_evacuate",
+                  "text": "15秒前ボード提示までに機材を持ってグリッドから退去しなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4. 4)",
+              "items": [
+                {
+                  "id": "sf_31_4_4_limiter",
+                  "text": "グリッドを離れる際、スタートライン通過まで速度リミッター（最高60km/h）を作動させなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10",
+              "items": [
+                {
+                  "id": "sf_31_10_jump_start",
+                  "text": "レッドライト点灯から消灯までの間に静止状態を保持しなかった（反則スタート）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "15",
+              "items": [
+                {
+                  "id": "sf_31_15_delay_refuel",
+                  "text": "スタート手順が繰り返された際に燃料補給を行った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "16",
+              "items": [
+                {
+                  "id": "sf_31_16_push_start",
+                  "text": "スタート後、グリッド／ピットにおいて人為的な支援（手押し等）による発進を行った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第34条",
+          "articleTitle": "レースの中断およびレースの再開",
+          "sections": [
+            {
+              "sectionNo": "1. 2)",
+              "items": [
+                {
+                  "id": "sf_34_1_2_red_refuel",
+                  "text": "レース中断中、すでにピットにいた車両を除き給油を行った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "1. 5)",
+              "items": [
+                {
+                  "id": "sf_34_1_5_fastlane_work",
+                  "text": "レースの中断中、ファストレーンで許可された作業以外の作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "2. 3)",
+              "items": [
+                {
+                  "id": "sf_34_2_3_wheel_mount",
+                  "text": "レース再開3分前ボード提示までにホイールが装着されていなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sgt",
+      "name": "SUPER GT",
+      "fullName": "SUPER GT シリーズ",
+      "rulebookName": "2026 SUPER GT スポーティングレギュレーション",
+      "reportTitle": "SUPER GT 技術違反報告書",
+      "reportVer": "ver2026-1",
+      "articles": [
+        {
+          "articleNo": "第21条",
+          "articleTitle": "タイヤ",
+          "sections": [
+            {
+              "sectionNo": "3. 2)",
+              "items": [
+                {
+                  "id": "sgt_21_3_2_q1_start",
+                  "text": "予選Q1で使用したマーキングタイヤ以外で決勝レースをスタートした。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "3. 3)",
+              "items": [
+                {
+                  "id": "sgt_21_3_3_q2_start",
+                  "text": "Q2進出後、公式通知で指定されたスタートタイヤ（Q1またはQ2タイヤ）以外で決勝スタートした。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sgt_21_4_start_marking",
+                  "text": "グリッド走行開始以降、指定スタートタイヤの識別マーキングが施されていないタイヤを装着した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "8",
+              "items": [
+                {
+                  "id": "sgt_21_8_tire_pos",
+                  "text": "決勝開始時点で交換予定タイヤをオフィシャル視認可能位置に置かなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "11",
+              "items": [
+                {
+                  "id": "sgt_21_11_tire_heating",
+                  "text": "機材等を用いてタイヤを意図的に加熱・保温した（タイヤウォーマー等使用）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第26条",
+          "articleTitle": "一般安全規定",
+          "sections": [
+            {
+              "sectionNo": "5",
+              "items": [
+                {
+                  "id": "sgt_26_5_fire_board",
+                  "text": "オレンジディスク/FIREボード提示時に最寄りのファイアーステーションに停止しなかった、または消火確認前にピットに入った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "7",
+              "items": [
+                {
+                  "id": "sgt_26_7_reverse_gear",
+                  "text": "ピットエリアにおいて後退ギアを使用した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "8",
+              "items": [
+                {
+                  "id": "sgt_26_8_lights",
+                  "text": "点灯指示時の不点灯、または両側前照灯／リア／レインライト不点灯時に即座にピットで修復しなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sgt_26_9_steering_neutral",
+                  "text": "車両を離れる際にステアリングホイールを取り付けなかった、またはギアをニュートラルにしなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "11",
+              "items": [
+                {
+                  "id": "sgt_26_11_pit_speed",
+                  "text": "ピットレーン通過速度（最高50km/h）を超過した、またはファストレーンで意図的な加減速・蛇行運転を行った。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "計測速度",
+                  "inputUnit": "km/h"
+                }
+              ]
+            },
+            {
+              "sectionNo": "13",
+              "items": [
+                {
+                  "id": "sgt_26_13_age_limit",
+                  "text": "16歳未満の者を競技中のピットレーンに出入りさせた、またはナンバー無し車両を無断使用した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第27条",
+          "articleTitle": "ピットエリア",
+          "sections": [
+            {
+              "sectionNo": "1",
+              "items": [
+                {
+                  "id": "sgt_27_1_crew_count",
+                  "text": "7名より多い作業員が同時に作業エリアに出た。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "同時に出た人数",
+                  "inputUnit": "名"
+                },
+                {
+                  "id": "sgt_27_1_fire_armband",
+                  "text": "消火要員が専用の腕章を着用していなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "1.1",
+              "items": [
+                {
+                  "id": "sgt_27_1_1_lollipop",
+                  "text": "車両誘導員が車両の誘導以外の作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "行った作業内容"
+                },
+                {
+                  "id": "sgt_27_1_1_simultaneous_work",
+                  "text": "車両作業についた作業員が最大5名を超えた。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "作業人数",
+                  "inputUnit": "名"
+                }
+              ]
+            },
+            {
+              "sectionNo": "1.2",
+              "items": [
+                {
+                  "id": "sgt_27_1_2_tire_assist",
+                  "text": "タイヤ交換要員がタイヤを装着する際に援助を受けた。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sgt_27_1_2_tire_flat",
+                  "text": "タイヤ交換要員が外したタイヤを地面に平置きにしなかった。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sgt_27_1_2_wheel_nut",
+                  "text": "ホイールナット落下後の回収確認を行った。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sgt_27_1_2_tire_danger",
+                  "text": "タイヤ交換要員が外したタイヤを他の者へ手渡したり、転がしたり、放り投げる等の危険な行為を行った。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sgt_27_1_2_wrench_socket",
+                  "text": "インパクトレンチ待機時にソケットが車両輪郭の内側に入った、またはレンチが3個以上持ち込まれた。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "1.3",
+              "items": [
+                {
+                  "id": "sgt_27_1_3_refuel_work",
+                  "text": "燃料給油中に禁止されている作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "行った作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "sgt_27_2_crew_gear",
+                  "text": "作業エリアに出た作業要員の服装が不適切だった。",
+                  "inputType": "checkbox_with_suboptions",
+                  "subOptions": [
+                    "バイザー",
+                    "保護ゴーグル",
+                    "ヘルメット",
+                    "グローブ",
+                    "耐火スーツ",
+                    "バラクラバ",
+                    "腕章",
+                    "肌の露出"
+                  ]
+                }
+              ]
+            },
+            {
+              "sectionNo": "3",
+              "items": [
+                {
+                  "id": "sgt_27_3_engine_stop",
+                  "text": "ピット停車時のエンジン停止、またはジャッキアップ中のエンジン始動。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "sgt_27_3_restart_wheels",
+                  "text": "再スタート時のエンジン始動を4輪接地状態で行わなかった、またはドライバー以外が始動させた。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sgt_27_4_unsafe_release",
+                  "text": "安全が確認できていない状況でピットアウトした。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "不安全な状況の内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "5",
+              "items": [
+                {
+                  "id": "sgt_27_5_clean_up",
+                  "text": "作業終了ごとにピット作業エリアの備品・排出部品を片付けなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "11",
+              "items": [
+                {
+                  "id": "sgt_27_11_arm_height",
+                  "text": "エアホース/給油ホースアーム高さが地上2m以上確保されていなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "14",
+              "items": [
+                {
+                  "id": "sgt_27_14_pit_out_block",
+                  "text": "ピットアウトする車両が作業エリアへ侵入する車両を妨害したり、ファストレーンを走行中の車両を妨害した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "妨害された車両No."
+                }
+              ]
+            },
+            {
+              "sectionNo": "17",
+              "items": [
+                {
+                  "id": "sgt_27_17_danger_driving",
+                  "text": "ピットレーン走行時において、ピットレーンにいる全ての要員や備品への接触など、ほかの車両への危険な走行を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第28条",
+          "articleTitle": "燃料",
+          "sections": [
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "sgt_28_2_refuel_tower",
+                  "text": "燃料補給装置の転倒防止策不備（耐荷重600kgfワイヤー2本以上固定未実施）、ホース長不足（5m未満）、携行缶給油等の違反。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "違反内容詳細"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sgt_28_4_fuel_cooling",
+                  "text": "燃料または燃料補給装置の冷却を行った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "7",
+              "items": [
+                {
+                  "id": "sgt_28_7_fire_extinguisher",
+                  "text": "燃料補給中に消火要員（4.5kg以上消火器保持）が待機しなかった、または左右分離車で2名待機しなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sgt_28_9_jack_during_refuel",
+                  "text": "燃料補給中にジャッキを作動させた（上げ下げを行った）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "13",
+              "items": [
+                {
+                  "id": "sgt_28_13_fuel_sample",
+                  "text": "セッション終了後に燃料検査に必要な規定量の燃料サンプルが抽出できなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第32条",
+          "articleTitle": "スタート手順",
+          "sections": [
+            {
+              "sectionNo": "7",
+              "items": [
+                {
+                  "id": "sgt_32_7_grid_entry",
+                  "text": "全車グリッド到着前に登録メカニック1名以外が走路上へ立ち入った、またはエアゲージ以外の工具を持ち込んだ。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sgt_32_9_airjack_board",
+                  "text": "グリッド上でのエアジャッキ使用時に下面当て板を使用しなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10",
+              "items": [
+                {
+                  "id": "sgt_32_10_grid_forbidden",
+                  "text": "グリッド上で禁止されている作業（給油・油脂補給、HV駆動用バッテリー充電、ドライアイス使用）を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "禁止作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "11. 1)",
+              "items": [
+                {
+                  "id": "sgt_32_11_1_five_min",
+                  "text": "5分前ボード提示後にタイヤ交換等の禁止作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "11. 2)",
+              "items": [
+                {
+                  "id": "sgt_32_11_2_three_min",
+                  "text": "3分前ボード提示後にコース上から退去しなかった、またはドアを閉めなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "13",
+              "items": [
+                {
+                  "id": "sgt_32_13_formation_gap",
+                  "text": "フォーメーションラップ中にスタート練習、著しい隊列乱し、5台分以上の車間空け、グリッド枠外はみ出し走行を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "14",
+              "items": [
+                {
+                  "id": "sgt_32_14_pole_speed",
+                  "text": "オフィシャルカー退去後、ポールポジション車両が規定速度（約80〜90km/h）を維持しなかった、または加減速を行った。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "計測速度",
+                  "inputUnit": "km/h"
+                }
+              ]
+            },
+            {
+              "sectionNo": "17",
+              "items": [
+                {
+                  "id": "sgt_32_17_jump_start",
+                  "text": "スタートライン通過前に他車を追い越した（反則スタート／フライング）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sfl",
+      "name": "SUPER FORMULA LIGHTS",
+      "fullName": "全日本スーパーフォーミュラ・ライツ選手権",
+      "rulebookName": "2026 全日本スーパーフォーミュラ・ライツ選手権 統一規則",
+      "reportTitle": "SUPER FORMULA LIGHTS 技術違反報告書",
+      "reportVer": "ver2026-1",
+      "articles": [
+        {
+          "articleNo": "第21条",
+          "articleTitle": "ピットエリア",
+          "sections": [
+            {
+              "sectionNo": "1",
+              "items": [
+                {
+                  "id": "sfl_21_1_crew_limit",
+                  "text": "作業エリアに出た人数が4名を超えた、または車両の作業についた人数が3名を超えた。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "作業エリア出入人数",
+                  "inputUnit": "名"
+                }
+              ]
+            },
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "sfl_21_2_signaling",
+                  "text": "シグナリングプラットフォームに出た人数が3名を超えた、または走行車両を妨害した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "3",
+              "items": [
+                {
+                  "id": "sfl_21_3_reverse_gear",
+                  "text": "ピットエリアで後退ギアを使用した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "5",
+              "items": [
+                {
+                  "id": "sfl_21_5_tire_place",
+                  "text": "ピット内およびダミーグリッド上以外でタイヤ交換を行った。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "6",
+              "items": [
+                {
+                  "id": "sfl_21_6_heat_device",
+                  "text": "作業エリアで発火・高温装置を使用した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "8",
+              "items": [
+                {
+                  "id": "sfl_21_8_unsafe_release",
+                  "text": "安全が確認できていない状況で車両をピットアウトさせた。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10",
+              "items": [
+                {
+                  "id": "sfl_21_10_clothing",
+                  "text": "作業エリアにて作業につくチームクルーの服装（長袖・長ズボン等）が不適切だった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第25条",
+          "articleTitle": "燃料",
+          "sections": [
+            {
+              "sectionNo": "1",
+              "items": [
+                {
+                  "id": "sfl_25_1_refuel_ban",
+                  "text": "予選中または決勝レース中に燃料補給を行った（給油禁止違反）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sfl_25_4_liquid_ban",
+                  "text": "決勝レース中にすべての液体の補給を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "補給液体内容"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第26条",
+          "articleTitle": "一般安全規定",
+          "sections": [
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "sfl_26_4_push_start",
+                  "text": "ピットエリアでの人為的な支援による発進（手押し発進）を行った、または後退ギアを使用した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "sfl_26_9_pit_speed",
+                  "text": "ピットレーン通過速度（最高60km/h）を超過した。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "計測速度",
+                  "inputUnit": "km/h"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第31条",
+          "articleTitle": "スタート手順",
+          "sections": [
+            {
+              "sectionNo": "4. 2)",
+              "items": [
+                {
+                  "id": "sfl_31_4_2_three_min",
+                  "text": "3分前ボード提示後に作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4. 3)",
+              "items": [
+                {
+                  "id": "sfl_31_4_3_crew_evacuate",
+                  "text": "15秒前ボード提示までに機材を持ってグリッドから退去しなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10",
+              "items": [
+                {
+                  "id": "sfl_31_10_jump_start",
+                  "text": "レッドライト点灯から消灯までの間に静止状態を保持しなかった（反則スタート）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stai",
+      "name": "スーパー耐久 (Super Taikyu)",
+      "fullName": "スーパー耐久シリーズ",
+      "rulebookName": "2026 スーパー耐久シリーズ スポーツ規則・技術規則",
+      "reportTitle": "スーパー耐久シリーズ 技術違反報告書",
+      "reportVer": "ver2026-ST",
+      "articles": [
+        {
+          "articleNo": "第10条",
+          "articleTitle": "ドライバーの遵守事項",
+          "sections": [
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "stai_10_2_lights",
+                  "text": "ライト点灯指示時の不点灯、または両側前照灯／レインライト不点灯時に即座にピットで修復しなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "3",
+              "items": [
+                {
+                  "id": "stai_10_3_seatbelt",
+                  "text": "ピットレーン走行中にシートベルトを外した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第16条",
+          "articleTitle": "スタート",
+          "sections": [
+            {
+              "sectionNo": "4",
+              "items": [
+                {
+                  "id": "stai_16_4_airjack_board",
+                  "text": "グリッド上でエアジャッキ使用時に路面保護対策（当て板）を行わなかった、またはドリンク以外の液体を補充した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4. 1)",
+              "items": [
+                {
+                  "id": "stai_16_4_1_five_min",
+                  "text": "5分前ボード提示後にコース上における車両への作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4. 2)",
+              "items": [
+                {
+                  "id": "stai_16_4_2_three_min",
+                  "text": "3分前ボード提示後に退去しなかった、または乗車補助作業を行った／ドアを閉めなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "4. 5)",
+              "items": [
+                {
+                  "id": "stai_16_4_5_formation",
+                  "text": "フォーメーションラップ中にスタート練習、著しい隊列乱し、追い越し、2列縦隊後の左右はみ出しを行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10",
+              "items": [
+                {
+                  "id": "stai_16_10_rolling_speed",
+                  "text": "オフィシャルカー退場後、先頭車両が規定速度（70km/h〜約90km/h）を維持しなかった、または自車グリッド枠から横にはみ出した。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "計測速度",
+                  "inputUnit": "km/h"
+                }
+              ]
+            },
+            {
+              "sectionNo": "11",
+              "items": [
+                {
+                  "id": "stai_16_11_jump_start",
+                  "text": "スタートライン通過前に他車を追い越した（反則スタート）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第17条",
+          "articleTitle": "ドライバー交代を伴うピットストップ義務",
+          "sections": [
+            {
+              "sectionNo": "1",
+              "items": [
+                {
+                  "id": "stai_17_1_mandatory_pit",
+                  "text": "規定回数の義務ピットストップ（ドライバー交代）を行わなかった。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "未達回数",
+                  "inputUnit": "回"
+                }
+              ]
+            },
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "stai_17_2_transponder",
+                  "text": "ドライバー交代時にトランスポンダーの交換・設定変更を確実に行わなかった。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第18条",
+          "articleTitle": "ピット作業",
+          "sections": [
+            {
+              "sectionNo": "2",
+              "items": [
+                {
+                  "id": "stai_18_2_engine_stop",
+                  "text": "ピット作業エリア停車中にエンジンを停止しなかった、または作業終了前に始動した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "3",
+              "items": [
+                {
+                  "id": "stai_18_3_pit_speed",
+                  "text": "ピットレーン通過速度（最高50km/h以下）を超過した。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "計測速度",
+                  "inputUnit": "km/h"
+                }
+              ]
+            },
+            {
+              "sectionNo": "8",
+              "items": [
+                {
+                  "id": "stai_18_8_crew_eight",
+                  "text": "作業エリアに出た登録ピット要員が8名を超えた、または同時作業員が5名を超えた。",
+                  "inputType": "checkbox_with_number",
+                  "inputLabel": "人数",
+                  "inputUnit": "名"
+                },
+                {
+                  "id": "stai_18_8_tire_two_crew",
+                  "text": "タイヤ交換の一連作業を3名以上で行った、または要員の途中交代を行った。",
+                  "inputType": "checkbox"
+                },
+                {
+                  "id": "stai_18_8_clothing",
+                  "text": "ピット要員の服装・装備不適切（耐火スーツ未着用、肌露出、ヘルメット/ゴーグル不備等）。",
+                  "inputType": "checkbox_with_suboptions",
+                  "subOptions": [
+                    "耐火スーツ",
+                    "ヘルメット",
+                    "ゴーグル/シールド",
+                    "グローブ",
+                    "肌露出",
+                    "サンダル履き"
+                  ]
+                }
+              ]
+            },
+            {
+              "sectionNo": "8. 1)",
+              "items": [
+                {
+                  "id": "stai_18_8_1_tire_flat",
+                  "text": "外したタイヤを地面に平置きにしなかった、または他の者へ手渡し・転がし・放り投げた。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "9",
+              "items": [
+                {
+                  "id": "stai_18_9_refuel_work",
+                  "text": "給油中に禁止されている作業を行った。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "作業内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "12",
+              "items": [
+                {
+                  "id": "stai_18_12_refuel_crew",
+                  "text": "消火要員（3kg以上消火器保持）未待機、または給油中のジャッキ作動（上げ下げ）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "22",
+              "items": [
+                {
+                  "id": "stai_18_22_unsafe_release",
+                  "text": "安全が確認できていない状況でピットアウトさせた（アンセーフリリース）。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "状況内容"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "附則1 / 附則3",
+          "articleTitle": "FCY / マナー",
+          "sections": [
+            {
+              "sectionNo": "附則1",
+              "items": [
+                {
+                  "id": "stai_fcy_pit_in",
+                  "text": "FCY（フルコースイエロー）運用中にピットレーンに進入した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "附則3 21.",
+              "items": [
+                {
+                  "id": "stai_guide_pit_out_t1",
+                  "text": "ピットアウト直後の第1コーナーで本コース走行車両の進路を妨害した。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "妨害された車両No."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jaf_general",
+      "name": "JAF 国内競技一般",
+      "fullName": "JAF 国内競技規則（全公認レース共通）",
+      "rulebookName": "JAF 国内競技規則",
+      "reportTitle": "技術違反報告書 / 審判員報告書",
+      "reportVer": "ver2025-JAF",
+      "articles": [
+        {
+          "articleNo": "第6章",
+          "articleTitle": "スタートおよびヒート",
+          "sections": [
+            {
+              "sectionNo": "6-5",
+              "items": [
+                {
+                  "id": "jaf_6_5_rolling",
+                  "text": "ローリングスタートにおいて、スタートライン通過前に他車を追い越した。",
+                  "inputType": "checkbox"
+                }
+              ]
+            },
+            {
+              "sectionNo": "6-8",
+              "items": [
+                {
+                  "id": "jaf_6_8_jump_start",
+                  "text": "所定のスタート合図以前に自己の位置から前進した（反則スタート）。",
+                  "inputType": "checkbox"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "articleNo": "第10章",
+          "articleTitle": "競技役員・審判員",
+          "sections": [
+            {
+              "sectionNo": "10-18",
+              "items": [
+                {
+                  "id": "jaf_10_18_refuel_supervise",
+                  "text": "補給監察員による燃料補給作業規則違反の確認・報告。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "違反内容"
+                }
+              ]
+            },
+            {
+              "sectionNo": "10-20. 3)",
+              "items": [
+                {
+                  "id": "jaf_10_20_3_fact_judge",
+                  "text": "ピットレーン境界線接触・越境、その他事実判定事項への違反。",
+                  "inputType": "checkbox_with_text",
+                  "inputLabel": "判定事実内容"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

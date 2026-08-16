@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 min-h-screen font-sans antialiased;
+    font-feature-settings: "palt" 1;
+  }
+}
+
+/* 画面プレビュー時の A4 用紙スタイル (縦297mm × 横210mm) */
+.a4-sheet-preview {
+  width: 210mm;
+  min-height: 297mm;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 12mm 16mm 12mm 16mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   印刷専用スタイル (@media print) - ブラウザ余白干渉を断ち、確実に1ページ化
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0 !important; /* ブラウザ側の自動余白加算をゼロにして二重余白を防止 */
+  }
+
+  *,
+  *::before,
+  *::after {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html, 
+  body {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 非印刷UIを完全非表示 */
+  .no-print,
+  header,
+  nav,
+  button,
+  textarea,
+  input,
+  .print-container-wrapper > div:first-child {
+    display: none !important;
+  }
+
+  #root, 
+  main, 
+  .print-container-wrapper, 
+  .print-target-container {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    overflow: hidden !important;
+    position: static !important;
+  }
+
+  /* A4用紙本体：余白0のページ枠内に正確なA4実寸(210mm×297mm)で配置 */
+  .a4-sheet-preview {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    min-height: 297mm !important;
+    margin: 0 auto !important;
+    padding: 10mm 14mm 10mm 14mm !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    page-break-after: avoid !important;
+    page-break-before: avoid !important;
+  }
+
+  /* ①「該当違反のみ抽出モード」: 上下に分離し最下部に署名欄を固定 */
+  .a4-sheet-preview.mode-selected-only {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .a4-sheet-preview.mode-selected-only .report-signatures-container {
+    margin-top: auto !important;
+    padding-bottom: 2mm !important;
+  }
+
+  /* ②「全項目様式」 */
+  .a4-sheet-preview.mode-full-sheet {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  /* 表のスタイル */
+  .report-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1.5px solid #000000 !important;
+  }
+
+  .report-table tr {
+    page-break-inside: avoid !important;
+  }
+
+  .report-table th,
+  .report-table td {
+    border: 1px solid #000000 !important;
+    padding: 2.5px 5px !important;
+    vertical-align: middle !important;
+    color: #000000 !important;
+    font-size: 9.5pt !important;
+    line-height: 1.2 !important;
+  }
+
+  .a4-sheet-preview.mode-full-sheet .report-table th,
+  .a4-sheet-preview.mode-full-sheet .report-table td {
+    padding: 1.5px 3.5px !important;
+    font-size: 8.5pt !important;
+    line-height: 1.15 !important;
+  }
+
+  .report-table-header-cell {
+    background-color: #f3f4f6 !important;
+    font-weight: bold !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

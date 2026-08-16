@@ -1,0 +1,209 @@
+{
+  "year": 2026,
+  "schedules": {
+    "sf": [
+      {
+        "round": "第1戦・第2戦",
+        "name": "2026 年 全日本スーパーフォーミュラ選手権 第 1 戦・第 2 戦 もてぎ",
+        "circuit": "モビリティリゾートもてぎ",
+        "startDate": "2026-04-03",
+        "endDate": "2026-04-05"
+      },
+      {
+        "round": "第3戦",
+        "name": "2026 年 全日本スーパーフォーミュラ選手権 第 3 戦 オートポリス",
+        "circuit": "オートポリス",
+        "startDate": "2026-04-25",
+        "endDate": "2026-04-26"
+      },
+      {
+        "round": "第4戦・第5戦",
+        "name": "2026 年 全日本スーパーフォーミュラ選手権 第 4 戦・第 5 戦 鈴鹿",
+        "circuit": "鈴鹿サーキット",
+        "startDate": "2026-05-22",
+        "endDate": "2026-05-24"
+      },
+      {
+        "round": "第6戦・第7戦",
+        "name": "2026 年 全日本スーパーフォーミュラ選手権 第 6 戦・第 7 戦 富士",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-07-17",
+        "endDate": "2026-07-19"
+      },
+      {
+        "round": "第8戦",
+        "name": "2026 年 全日本スーパーフォーミュラ選手権 第 8 戦 SUGO",
+        "circuit": "スポーツランドSUGO",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-09"
+      },
+      {
+        "round": "第9戦・第10戦",
+        "name": "2026 年 全日本スーパーフォーミュラ選手権 第 9 戦・第 10 戦 富士",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-10-09",
+        "endDate": "2026-10-11"
+      },
+      {
+        "round": "第11戦・第12戦",
+        "name": "2026 年 第25回 JAF 鈴鹿グランプリ 全日本スーパーフォーミュラ選手権 第 11 戦・第 12 戦",
+        "circuit": "鈴鹿サーキット",
+        "startDate": "2026-11-20",
+        "endDate": "2026-11-22"
+      }
+    ],
+    "sgt": [
+      {
+        "round": "Round 1",
+        "name": "2026 AUTOBACS SUPER GT Round 1 OKAYAMA GT 300km RACE",
+        "circuit": "岡山国際サーキット",
+        "startDate": "2026-04-11",
+        "endDate": "2026-04-12"
+      },
+      {
+        "round": "Round 2",
+        "name": "2026 AUTOBACS SUPER GT Round 2 FUJI GT 3Hours RACE",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-05-03",
+        "endDate": "2026-05-04"
+      },
+      {
+        "round": "Round 3",
+        "name": "2026 AUTOBACS SUPER GT Round 3 SEPANG",
+        "circuit": "セパン・インターナショナル・サーキット",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-21"
+      },
+      {
+        "round": "Round 4",
+        "name": "2026 AUTOBACS SUPER GT Round 4 FUJI GT 350km RACE",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-08-01",
+        "endDate": "2026-08-02"
+      },
+      {
+        "round": "Round 5",
+        "name": "2026 AUTOBACS SUPER GT Round 5 SUZUKA GT 300km RACE",
+        "circuit": "鈴鹿サーキット",
+        "startDate": "2026-08-22",
+        "endDate": "2026-08-23"
+      },
+      {
+        "round": "Round 6",
+        "name": "2026 AUTOBACS SUPER GT Round 6 SUGO GT 300km RACE",
+        "circuit": "スポーツランドSUGO",
+        "startDate": "2026-09-19",
+        "endDate": "2026-09-20"
+      },
+      {
+        "round": "Round 7",
+        "name": "2026 AUTOBACS SUPER GT Round 7 AUTOPOLIS GT 3Hours RACE",
+        "circuit": "オートポリス",
+        "startDate": "2026-10-17",
+        "endDate": "2026-10-18"
+      },
+      {
+        "round": "Round 8",
+        "name": "2026 AUTOBACS SUPER GT Round 8 MOTEGI GT 300km RACE",
+        "circuit": "モビリティリゾートもてぎ",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-08"
+      }
+    ],
+    "sfl": [
+      {
+        "round": "第1大会",
+        "name": "2026 年 全日本スーパーフォーミュラ・ライツ選手権 第 1 大会 富士",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-03-27",
+        "endDate": "2026-03-29"
+      },
+      {
+        "round": "第2大会",
+        "name": "2026 年 全日本スーパーフォーミュラ・ライツ選手権 第 2 大会 オートポリス",
+        "circuit": "オートポリス",
+        "startDate": "2026-04-24",
+        "endDate": "2026-04-26"
+      },
+      {
+        "round": "第3大会",
+        "name": "2026 年 全日本スーパーフォーミュラ・ライツ選手権 第 3 大会 鈴鹿",
+        "circuit": "鈴鹿サーキット",
+        "startDate": "2026-05-22",
+        "endDate": "2026-05-24"
+      },
+      {
+        "round": "第4大会",
+        "name": "2026 年 全日本スーパーフォーミュラ・ライツ選手権 第 4 大会 岡山",
+        "circuit": "岡山国際サーキット",
+        "startDate": "2026-06-12",
+        "endDate": "2026-06-14"
+      },
+      {
+        "round": "第5大会",
+        "name": "2026 年 全日本スーパーフォーミュラ・ライツ選手権 第 5 大会 SUGO",
+        "circuit": "スポーツランドSUGO",
+        "startDate": "2026-08-28",
+        "endDate": "2026-08-30"
+      },
+      {
+        "round": "第6大会",
+        "name": "2026 年 全日本スーパーフォーミュラ・ライツ選手権 第 6 大会 もてぎ",
+        "circuit": "モビリティリゾートもてぎ",
+        "startDate": "2026-09-11",
+        "endDate": "2026-09-13"
+      }
+    ],
+    "stai": [
+      {
+        "round": "第1戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 1 戦 もてぎスーパー耐久 4Hours",
+        "circuit": "モビリティリゾートもてぎ",
+        "startDate": "2026-03-21",
+        "endDate": "2026-03-22"
+      },
+      {
+        "round": "第2戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 2 戦 SUZUKA 5Hours",
+        "circuit": "鈴鹿サーキット",
+        "startDate": "2026-04-18",
+        "endDate": "2026-04-19"
+      },
+      {
+        "round": "第3戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 3 戦 富士 24 時間レース",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-06-05",
+        "endDate": "2026-06-07"
+      },
+      {
+        "round": "第4戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 4 戦 SUGO スーパー耐久 4Hours",
+        "circuit": "スポーツランドSUGO",
+        "startDate": "2026-07-04",
+        "endDate": "2026-07-05"
+      },
+      {
+        "round": "第5戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 5 戦 オートポリス 5Hours",
+        "circuit": "オートポリス",
+        "startDate": "2026-07-25",
+        "endDate": "2026-07-26"
+      },
+      {
+        "round": "第6戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 6 戦 岡山 3Hours",
+        "circuit": "岡山国際サーキット",
+        "startDate": "2026-10-24",
+        "endDate": "2026-10-25"
+      },
+      {
+        "round": "第7戦",
+        "name": "ENEOS スーパー耐久シリーズ2026 第 7 戦 S耐ファイナル 富士 4Hours",
+        "circuit": "富士スピードウェイ",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-15"
+      }
+    ]
+  }
+}
