@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/lhan_houkoku/', // ←★この1行をここに追加します
+  base: '/./', // ←★この1行をここに追加します
   server: {
     host: true, // スマホ等の同一Wi-Fi端末からアクセス可能にする
     port: 5173
