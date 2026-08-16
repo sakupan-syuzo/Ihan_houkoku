@@ -110,13 +110,13 @@ export const ReportDocument: React.FC<ReportDocumentProps> = ({
   const isSelectedOnly = mode === 'selected_only'
 
   return (
-    <div className={`a4-sheet-preview font-serif text-black leading-tight bg-white ${isSelectedOnly ? 'mode-selected-only' : 'mode-full-sheet'}`}>
+    <div className={`a4-sheet-preview text-black leading-tight bg-white ${isSelectedOnly ? 'mode-selected-only' : 'mode-full-sheet'}`}>
       {/* 上部コンテンツブロック（ヘッダー + 表） */}
       <div className="report-main-content">
         {/* 1. タイトル */}
         <div className="mb-4 text-center">
           <div className="inline-block border border-black px-6 py-1 bg-white shadow-xs">
-            <h1 className="text-xl sm:text-2xl font-bold tracking-wider text-black font-serif">
+            <h1 className="text-xl sm:text-2xl font-bold tracking-wider text-black">
               {category.reportTitle}
             </h1>
           </div>
