@@ -5,9 +5,10 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './', // ←★この1行をここに追加します
+  // ★ ここを '/lhan_houkoku/' に変更します
+  base: '/lhan_houkoku/',
   server: {
-    host: true, // スマホ等の同一Wi-Fi端末からアクセス可能にする
+    host: true,
     port: 5173
   },
   plugins: [
