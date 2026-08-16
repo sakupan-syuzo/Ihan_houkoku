@@ -2,7 +2,8 @@
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 min-h-screen font-sans antialiased;
+    @apply bg-slate-950 text-slate-100 min-h-screen antialiased;
+    font-family: "Meiryo UI", "Meiryo", "BIZ UDPGothic", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
     font-feature-settings: "palt" 1;
   }
 }
@@ -20,6 +21,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Meiryo UI", "Meiryo", "BIZ UDPGothic", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
 }
 
 /* ==========================================================================
@@ -28,7 +30,7 @@
 @media print {
   @page {
     size: A4 portrait;
-    margin: 0 !important; /* ブラウザ側の自動余白加算をゼロにして二重余白を防止 */
+    margin: 0 !important;
   }
 
   *,
@@ -49,6 +51,7 @@
     background-color: #ffffff !important;
     color: #000000 !important;
     overflow: hidden !important;
+    font-family: "Meiryo UI", "Meiryo", "BIZ UDPGothic", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
@@ -78,7 +81,7 @@
     position: static !important;
   }
 
-  /* A4用紙本体：余白0のページ枠内に正確なA4実寸(210mm×297mm)で配置 */
+  /* A4用紙本体 */
   .a4-sheet-preview {
     width: 210mm !important;
     height: 297mm !important;
@@ -93,9 +96,10 @@
     page-break-inside: avoid !important;
     page-break-after: avoid !important;
     page-break-before: avoid !important;
+    font-family: "Meiryo UI", "Meiryo", "BIZ UDPGothic", -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif !important;
   }
 
-  /* ①「該当違反のみ抽出モード」: 上下に分離し最下部に署名欄を固定 */
+  /* ①「該当違反のみ抽出モード」 */
   .a4-sheet-preview.mode-selected-only {
     display: flex !important;
     flex-direction: column !important;
@@ -132,7 +136,7 @@
     vertical-align: middle !important;
     color: #000000 !important;
     font-size: 9.5pt !important;
-    line-height: 1.2 !important;
+    line-height: 1.25 !important;
   }
 
   .a4-sheet-preview.mode-full-sheet .report-table th,
