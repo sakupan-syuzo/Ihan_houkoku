@@ -8,6 +8,7 @@ interface DynamicViolationFormProps {
   onUpdateViolation: (itemId: string, update: Partial<ViolationInputState>) => void
   additionalNotes: string
   onNotesChange: (notes: string) => void
+  isDarkMode: boolean
 }
 
 export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
@@ -15,7 +16,8 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
   violations,
   onUpdateViolation,
   additionalNotes,
-  onNotesChange
+  onNotesChange,
+  isDarkMode
 }) => {
   // すべてのアコーディオンをデフォルトで開くか、または開閉状態を管理
   const [openArticles, setOpenArticles] = useState<Record<string, boolean>>(() => {
@@ -45,16 +47,37 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
     return count
   }
 
+  // テーマ色定義
+  const theme = {
+    cardBg: isDarkMode ? 'bg-slate-900/60' : 'bg-white',
+    cardBgSolid: isDarkMode ? 'bg-slate-900' : 'bg-white',
+    border: isDarkMode ? 'border-slate-800' : 'border-gray-300',
+    text: isDarkMode ? 'text-slate-200' : 'text-gray-900',
+    textMuted: isDarkMode ? 'text-slate-400' : 'text-gray-600',
+    textHighlight: isDarkMode ? 'text-amber-400' : 'text-amber-600',
+    textAccent: isDarkMode ? 'text-slate-300' : 'text-gray-800',
+    badgeBg: isDarkMode ? 'bg-slate-800' : 'bg-gray-200',
+    badgeBorder: isDarkMode ? 'border-slate-700' : 'border-gray-300',
+    inputBg: isDarkMode ? 'bg-slate-950' : 'bg-gray-50',
+    inputBorder: isDarkMode ? 'border-slate-700' : 'border-gray-300',
+    inputText: isDarkMode ? 'text-slate-100' : 'text-gray-900',
+    placeholder: isDarkMode ? 'placeholder-slate-500' : 'placeholder-gray-400',
+    hoverBg: isDarkMode ? 'hover:bg-slate-800/50' : 'hover:bg-gray-50',
+    itemBg: isDarkMode ? 'bg-slate-950/60' : 'bg-gray-50',
+    itemBorder: isDarkMode ? 'border-slate-800' : 'border-gray-200',
+    itemHoverBorder: isDarkMode ? 'hover:border-slate-700' : 'hover:border-gray-300'
+  }
+
   return (
     <section className="space-y-3">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-sm font-bold text-slate-200 flex items-center gap-2">
+          <h2 className={`text-sm font-bold ${theme.text} flex items-center gap-2`}>
             <AlertTriangle className="w-4 h-4 text-red-500" />
             規則条項別 違反選択・詳細入力
           </h2>
-          <p className="text-xs text-slate-400 mt-0.5">
-            適用規則書: <span className="text-slate-300 font-medium">{category.rulebookName}</span>
+          <p className={`text-xs ${theme.textMuted} mt-0.5`}>
+            適用規則書: <span className={`${theme.textAccent} font-medium`}>{category.rulebookName}</span>
           </p>
         </div>
       </div>
@@ -71,21 +94,21 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
                 key={article.articleNo}
                 className={`border rounded-xl transition-all duration-200 overflow-hidden ${
                   articleViolations > 0
-                    ? 'border-red-500/50 bg-slate-900/90 shadow-md shadow-red-950/30'
-                    : 'border-slate-800 bg-slate-900/60'
+                    ? `border-red-500/50 ${isDarkMode ? 'bg-slate-900/90' : 'bg-red-50'} shadow-md ${isDarkMode ? 'shadow-red-950/30' : 'shadow-red-200'}`
+                    : `${theme.border} ${theme.cardBg}`
                 }`}
               >
                 {/* アコーディオンヘッダー */}
                 <button
                   type="button"
                   onClick={() => toggleArticle(article.articleNo)}
-                  className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-slate-800/50 transition-colors"
+                  className={`w-full px-4 py-3 flex items-center justify-between text-left ${theme.hoverBg} transition-colors`}
                 >
                   <div className="flex items-center gap-2.5">
-                    <span className="text-xs font-black px-2 py-0.5 rounded bg-slate-800 text-amber-400 border border-slate-700">
+                    <span className={`text-xs font-black px-2 py-0.5 rounded ${theme.badgeBg} ${theme.textHighlight} border ${theme.badgeBorder}`}>
                       {article.articleNo}
                     </span>
-                    <span className="text-sm font-bold text-slate-200">
+                    <span className={`text-sm font-bold ${theme.text}`}>
                       {article.articleTitle}
                     </span>
                     {articleViolations > 0 && (
@@ -94,19 +117,19 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
                       </span>
                     )}
                   </div>
-                  <div className="text-slate-400">
+                  <div className={theme.textMuted}>
                     {isOpen ? <ChevronDown className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
                   </div>
                 </button>
 
                 {/* アコーディオン本体 */}
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 border-t border-slate-800/80 space-y-4">
+                  <div className={`px-4 pb-4 pt-1 border-t ${isDarkMode ? 'border-slate-800/80' : 'border-gray-200'} space-y-4`}>
                     {article.sections.map((section) => (
                       <div key={section.sectionNo} className="space-y-2 pt-2 first:pt-0">
                         {section.sectionNo !== '―' && (
-                          <div className="text-xs font-bold text-slate-400 flex items-center gap-1.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                          <div className={`text-xs font-bold ${theme.textMuted} flex items-center gap-1.5`}>
+                            <span className={`w-1.5 h-1.5 rounded-full ${isDarkMode ? 'bg-amber-400' : 'bg-amber-600'}`} />
                             項: {section.sectionNo}
                           </div>
                         )}
@@ -120,6 +143,7 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
                                 item={item}
                                 state={state}
                                 onUpdate={(update) => onUpdateViolation(item.id, update)}
+                                isDarkMode={isDarkMode}
                               />
                             )
                           })}
@@ -133,20 +157,20 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
           })}
 
         {/* フリースペース（その他 / 特記事項入力欄） */}
-        <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 shadow-lg space-y-2.5">
+        <div className={`${theme.cardBgSolid} border ${theme.border} rounded-xl p-4 shadow-lg space-y-2.5`}>
           <div className="flex items-center justify-between">
-            <label className="text-sm font-bold text-slate-200 flex items-center gap-2">
-              <Edit3 className="w-4 h-4 text-amber-400" />
+            <label className={`text-sm font-bold ${theme.text} flex items-center gap-2`}>
+              <Edit3 className={`w-4 h-4 ${theme.textHighlight}`} />
               その他 / 特記事項・補足メモ（フリースペース）
             </label>
-            <span className="text-[11px] text-slate-400">※帳票の「その他」欄に印字されます</span>
+            <span className={`text-[11px] ${theme.textMuted}`}>※帳票の「その他」欄に印字されます</span>
           </div>
           <textarea
             value={additionalNotes}
             onChange={(e) => onNotesChange(e.target.value)}
             placeholder="その他の違反事項、状況詳細、指示内容や補足事項があれば自由に入力してください..."
             rows={3}
-            className="w-full bg-slate-950 border border-slate-700 rounded-lg p-2.5 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors resize-y"
+            className={`w-full ${theme.inputBg} border ${theme.inputBorder} rounded-lg p-2.5 text-xs sm:text-sm ${theme.inputText} ${theme.placeholder} focus:outline-none focus:border-red-500 transition-colors resize-y`}
           />
         </div>
       </div>
@@ -158,9 +182,10 @@ interface ViolationItemCardProps {
   item: RuleItem
   state: ViolationInputState
   onUpdate: (update: Partial<ViolationInputState>) => void
+  isDarkMode: boolean
 }
 
-const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUpdate }) => {
+const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUpdate, isDarkMode }) => {
   const isChecked = state.checked
 
   const handleToggle = () => {
@@ -175,34 +200,51 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
     onUpdate({ selectedSubOptions: next })
   }
 
+  const theme = {
+    itemBg: isDarkMode ? 'bg-slate-950/60' : 'bg-gray-50',
+    itemBorder: isDarkMode ? 'border-slate-800' : 'border-gray-200',
+    itemHoverBorder: isDarkMode ? 'hover:border-slate-700' : 'hover:border-gray-300',
+    text: isDarkMode ? 'text-slate-200' : 'text-gray-900',
+    textHighlight: isDarkMode ? 'text-amber-300' : 'text-amber-700',
+    inputBg: isDarkMode ? 'bg-slate-900' : 'bg-white',
+    inputBorder: isDarkMode ? 'border-slate-700' : 'border-gray-300',
+    inputText: isDarkMode ? 'text-slate-100' : 'text-gray-900',
+    placeholder: isDarkMode ? 'placeholder-slate-500' : 'placeholder-gray-400',
+    btnBg: isDarkMode ? 'bg-slate-900' : 'bg-white',
+    btnText: isDarkMode ? 'text-slate-300' : 'text-gray-700',
+    btnHoverBg: isDarkMode ? 'hover:bg-slate-800' : 'hover:bg-gray-100'
+  }
+
   return (
     <div
       className={`p-3 rounded-lg border transition-all ${
         isChecked
-          ? 'bg-red-950/20 border-red-500/60 ring-1 ring-red-500/40'
-          : 'bg-slate-950/60 border-slate-800 hover:border-slate-700'
+          ? isDarkMode
+            ? 'bg-red-950/20 border-red-500/60 ring-1 ring-red-500/40'
+            : 'bg-red-50 border-red-400 ring-1 ring-red-300'
+          : `${theme.itemBg} ${theme.itemBorder} ${theme.itemHoverBorder}`
       }`}
     >
       <div className="flex items-start gap-2.5 cursor-pointer" onClick={handleToggle}>
         <div className="mt-0.5 text-red-500 flex-shrink-0">
           {isChecked ? (
-            <CheckSquare className="w-4 h-4 fill-red-500 text-slate-950" />
+            <CheckSquare className={`w-4 h-4 fill-red-500 ${isDarkMode ? 'text-slate-950' : 'text-white'}`} />
           ) : (
-            <Square className="w-4 h-4 text-slate-500" />
+            <Square className={`w-4 h-4 ${isDarkMode ? 'text-slate-500' : 'text-gray-400'}`} />
           )}
         </div>
-        <div className="text-xs sm:text-sm font-medium text-slate-200 leading-snug select-none">
+        <div className={`text-xs sm:text-sm font-medium ${theme.text} leading-snug select-none`}>
           {item.text}
         </div>
       </div>
 
       {/* 追記項目エリア（チェックON時に展開） */}
       {isChecked && (
-        <div className="mt-3 pt-2.5 border-t border-red-500/20 pl-7 space-y-2.5">
+        <div className={`mt-3 pt-2.5 border-t ${isDarkMode ? 'border-red-500/20' : 'border-red-300'} pl-7 space-y-2.5`}>
           {/* テキスト入力付き */}
           {item.inputType === 'checkbox_with_text' && (
             <div>
-              <label className="block text-xs font-semibold text-amber-300 mb-1">
+              <label className={`block text-xs font-semibold ${theme.textHighlight} mb-1`}>
                 {item.inputLabel || '詳細内容'}：
               </label>
               <input
@@ -210,7 +252,7 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
                 value={state.textValue || ''}
                 onChange={(e) => onUpdate({ textValue: e.target.value })}
                 placeholder="具体的な作業内容・状況を記入"
-                className="w-full bg-slate-900 border border-slate-700 rounded-md px-2.5 py-1.5 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-red-500"
+                className={`w-full ${theme.inputBg} border ${theme.inputBorder} rounded-md px-2.5 py-1.5 text-xs ${theme.inputText} ${theme.placeholder} focus:outline-none focus:border-red-500`}
               />
             </div>
           )}
@@ -218,7 +260,7 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
           {/* 数値入力付き */}
           {item.inputType === 'checkbox_with_number' && (
             <div className="flex items-center gap-2">
-              <label className="text-xs font-semibold text-amber-300 whitespace-nowrap">
+              <label className={`text-xs font-semibold ${theme.textHighlight} whitespace-nowrap`}>
                 {item.inputLabel || '数値'}：
               </label>
               <div className="flex items-center gap-1">
@@ -227,10 +269,10 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
                   value={state.numberValue || ''}
                   onChange={(e) => onUpdate({ numberValue: e.target.value })}
                   placeholder="例: 7"
-                  className="w-20 bg-slate-900 border border-slate-700 rounded-md px-2.5 py-1.5 text-xs font-bold text-center text-red-400 focus:outline-none focus:border-red-500"
+                  className={`w-20 ${theme.inputBg} border ${theme.inputBorder} rounded-md px-2.5 py-1.5 text-xs font-bold text-center text-red-400 focus:outline-none focus:border-red-500`}
                 />
                 {item.inputUnit && (
-                  <span className="text-xs text-slate-400 font-semibold">{item.inputUnit}</span>
+                  <span className={`text-xs ${isDarkMode ? 'text-slate-400' : 'text-gray-600'} font-semibold`}>{item.inputUnit}</span>
                 )}
               </div>
             </div>
@@ -239,7 +281,7 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
           {/* サブチェックボックス群（服装・装備品など） */}
           {item.inputType === 'checkbox_with_suboptions' && item.subOptions && (
             <div>
-              <label className="block text-xs font-semibold text-amber-300 mb-1.5">
+              <label className={`block text-xs font-semibold ${theme.textHighlight} mb-1.5`}>
                 該当する不備項目を選択：
               </label>
               <div className="flex flex-wrap gap-1.5">
@@ -253,7 +295,7 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
                       className={`px-2 py-1 rounded text-xs font-medium border transition-all ${
                         isSubChecked
                           ? 'bg-red-600 text-white border-red-500 shadow-sm'
-                          : 'bg-slate-900 text-slate-300 border-slate-700 hover:bg-slate-800'
+                          : `${theme.btnBg} ${theme.btnText} ${theme.inputBorder} ${theme.btnHoverBg}`
                       }`}
                     >
                       {isSubChecked ? '☑ ' : '□ '}
