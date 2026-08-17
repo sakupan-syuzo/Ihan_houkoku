@@ -259,8 +259,8 @@ const ViolationItemCard: React.FC<ViolationItemCardProps> = ({ item, state, onUp
 
           {/* 数値入力付き */}
           {item.inputType === 'checkbox_with_number' && (
-            <div className="flex items-center gap-2">
-              <label className={`text-xs font-semibold ${theme.textHighlight} whitespace-nowrap`}>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <label className={`text-xs font-semibold ${theme.textHighlight}`}>
                 {item.inputLabel || '数値'}：
               </label>
               <div className="flex items-center gap-1">
