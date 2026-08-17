@@ -16,6 +16,15 @@ export const App: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<RaceCategory>(categories[0])
   const [isPreviewMode, setIsPreviewMode] = useState<boolean>(false)
   const [reportMode, setReportMode] = useState<ReportMode>('selected_only')
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    const saved = localStorage.getItem('theme')
+    return saved ? saved === 'dark' : false // デフォルトはライトモード
+  })
+
+  // テーマ変更をローカルストレージに保存
+  useEffect(() => {
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light')
+  }, [isDarkMode])
 
   // フォームデータ初期値
   const [formData, setFormData] = useState<ReportFormData>(() => {
@@ -150,8 +159,16 @@ export const App: React.FC = () => {
   // 選択中の違反数
   const activeViolationCount = Object.values(formData.violations).filter((v) => v.checked).length
 
+  // テーマによる動的クラス
+  const theme = {
+    bg: isDarkMode ? 'bg-slate-950' : 'bg-gray-50',
+    text: isDarkMode ? 'text-slate-100' : 'text-slate-900',
+    cardBg: isDarkMode ? 'bg-slate-900/80' : 'bg-white',
+    border: isDarkMode ? 'border-slate-800' : 'border-gray-300'
+  }
+
   return (
-    <div className="min-h-screen bg-slate-950 flex flex-col">
+    <div className={`min-h-screen ${theme.bg} ${theme.text} flex flex-col`}>
       {/* 画面ヘッダー（ナビゲーション & モード切替） */}
       <Header
         categories={categories}
@@ -164,18 +181,20 @@ export const App: React.FC = () => {
         reportMode={reportMode}
         onToggleReportMode={setReportMode}
         activeViolationCount={activeViolationCount}
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={() => setIsDarkMode(!isDarkMode)}
       />
 
       {/* メインコンテンツ */}
       <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 print:p-0 print:m-0 print:max-w-none">
         {/* モード切替タブ（スマホ用） */}
-        <div className="flex border-b border-slate-800 mb-6 no-print md:hidden">
+        <div className={`flex border-b ${theme.border} mb-6 no-print md:hidden`}>
           <button
             onClick={() => setIsPreviewMode(false)}
             className={`flex-1 py-2.5 text-xs font-bold flex items-center justify-center gap-1.5 border-b-2 transition-all ${
               !isPreviewMode
-                ? 'border-red-500 text-red-400 bg-slate-900/50'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? `border-red-500 text-red-400 ${isDarkMode ? 'bg-slate-900/50' : 'bg-gray-100'}`
+                : `border-transparent ${isDarkMode ? 'text-slate-400 hover:text-slate-200' : 'text-gray-500 hover:text-gray-700'}`
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
@@ -185,8 +204,8 @@ export const App: React.FC = () => {
             onClick={() => setIsPreviewMode(true)}
             className={`flex-1 py-2.5 text-xs font-bold flex items-center justify-center gap-1.5 border-b-2 transition-all ${
               isPreviewMode
-                ? 'border-amber-500 text-amber-400 bg-slate-900/50'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? `border-amber-500 text-amber-400 ${isDarkMode ? 'bg-slate-900/50' : 'bg-gray-100'}`
+                : `border-transparent ${isDarkMode ? 'text-slate-400 hover:text-slate-200' : 'text-gray-500 hover:text-gray-700'}`
             }`}
           >
             <Eye className="w-3.5 h-3.5" />
@@ -214,6 +233,7 @@ export const App: React.FC = () => {
               onChange={handleFormChange}
               onSetCurrentTime={handleSetCurrentTime}
               onAutoMatchEvent={handleAutoMatchEvent}
+              isDarkMode={isDarkMode}
             />
 
             {/* 規則条文に基づく動的違反フォーム ＋ フリースペース */}
@@ -223,6 +243,7 @@ export const App: React.FC = () => {
               onUpdateViolation={handleUpdateViolation}
               additionalNotes={formData.additionalNotes}
               onNotesChange={(notes) => handleFormChange('additionalNotes', notes)}
+              isDarkMode={isDarkMode}
             />
           </div>
 
@@ -235,11 +256,11 @@ export const App: React.FC = () => {
             <div className="lg:sticky lg:top-20 print:static">
               <div className="flex items-center justify-between mb-3 no-print">
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-300 flex items-center gap-1">
+                  <span className={`text-xs font-bold ${isDarkMode ? 'text-slate-300' : 'text-gray-700'} flex items-center gap-1`}>
                     <ShieldCheck className="w-4 h-4 text-emerald-400" />
                     公式帳票 A4 印刷プレビュー
                   </span>
-                  <span className="text-[11px] font-semibold bg-slate-800 text-amber-400 px-2 py-0.5 rounded border border-slate-700">
+                  <span className={`text-[11px] font-semibold ${isDarkMode ? 'bg-slate-800 border-slate-700 text-amber-400' : 'bg-gray-200 border-gray-300 text-amber-700'} px-2 py-0.5 rounded border`}>
                     {reportMode === 'selected_only' ? '該当違反のみ抽出' : '全項目様式'}
                   </span>
                 </div>
@@ -254,7 +275,7 @@ export const App: React.FC = () => {
               </div>
 
               {/* 印刷・帳票コンポーネント本体 */}
-              <div className="bg-slate-900/80 p-2 sm:p-6 rounded-xl border border-slate-800 overflow-x-auto shadow-inner flex justify-center print:bg-transparent print:border-none print:p-0 print:shadow-none print:overflow-visible">
+              <div className={`${theme.cardBg} p-2 sm:p-6 rounded-xl border ${theme.border} overflow-x-auto shadow-inner flex justify-center print:bg-transparent print:border-none print:p-0 print:shadow-none print:overflow-visible`}>
                 <ReportDocument
                   category={selectedCategory}
                   formData={formData}
