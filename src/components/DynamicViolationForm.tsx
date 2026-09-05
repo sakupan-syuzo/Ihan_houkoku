@@ -19,12 +19,12 @@ export const DynamicViolationForm: React.FC<DynamicViolationFormProps> = ({
   onNotesChange,
   isDarkMode
 }) => {
-  // すべてのアコーディオンをデフォルトで開くか、または開閉状態を管理
+  // すべてのアコーディオンをデフォルトで閉じておく
   const [openArticles, setOpenArticles] = useState<Record<string, boolean>>(() => {
     const initial: Record<string, boolean> = {}
-    category.articles.forEach((art, index) => {
-      // 最初の2つ、または違反があるものは開く
-      initial[art.articleNo] = index < 2
+    category.articles.forEach((art) => {
+      // 最初からすべてのアコーディオンを閉じる
+      initial[art.articleNo] = false
     })
     return initial
   })
